@@ -1,1 +1,175 @@
+# PixelSpace – Photo Sharing Web Application
+
+## About the Project
+
+PixelSpace is a web-based photo-sharing application developed using PHP and MySQL. It allows users to create accounts, share photos, add captions, explore posts, search for users and photos, and interact with content through likes.
+
+The project provides a simple and user-friendly interface with a dark navy and electric blue theme.
+
+## Features
+
+- **User Registration and Login:** Users can create accounts and log in securely.
+- **Photo Upload:** Upload images with captions.
+- **Home Feed:** View posts shared on the platform.
+- **User Profiles:** View user information, bios, and uploaded photos.
+- **Search:** Search for users and posts.
+- **Like and Unlike:** Interact with posts by liking or removing likes.
+- **Delete Posts:** Users can delete their own uploaded posts.
+- **Image Preview:** Preview a selected photo before uploading.
+- **Responsive Design:** Access the interface on different screen sizes.
+- **Database Integration:** Store user details, posts, captions, and likes using MySQL.
+
+## Technologies Used
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- PHP
+
+### Database
+- MySQL
+
+### Development Tools
+- Visual Studio Code
+- XAMPP
+- Apache
+- phpMyAdmin
+
+## Project Structure
+
+```text
+photo_grid/
+│
+├── index.php
+├── db.php
+├── login.php
+├── register.php
+├── logout.php
+├── upload.php
+├── profile.php
+├── search.php
+├── like.php
+├── delete_post.php
+│
+├── assets/
+│   └── style.css
+│
+├── uploads/
+│   └── Uploaded images
+│
+└── README.md
+```
+
+*Note: The file list represents the intended project structure. Keep only the files and folders that actually exist in your project.*
+
+## Installation and Setup
+
+### Prerequisites
+
+Install the following software:
+- XAMPP
+- Visual Studio Code
+- A web browser
+
+### Step 1: Copy the Project
+
+Place the project folder inside the XAMPP `htdocs` directory.
+
+Example:
+
+```text
+C:\xampp\htdocs\photo_grid
+```
+
+### Step 2: Start XAMPP
+
+1. Open XAMPP Control Panel.
+2. Start **Apache**.
+3. Start **MySQL**.
+
+### Step 3: Create the Database
+
+1. Open your browser.
+2. Visit `http://localhost/phpmyadmin`.
+3. Create a database named `pixelspace`.
+4. Create the required tables: `users`, `posts`, and `likes`, with the columns expected by the project code.
+
+If you already have the `pixelspace` database and its tables, you do not need to recreate them.
+
+### Step 4: Configure Database Connection
+
+Open `db.php` and configure the connection details to match your local MySQL setup.
+
+For a typical XAMPP installation, the settings may look like:
+
+```php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "pixelspace";
+```
+
+Use the connection settings already configured in your project if they differ.
+
+### Step 5: Run the Application
+
+Open your browser and visit:
+
+```text
+http://localhost/photo_grid/index.php
+```
+
+Register an account or log in to start using PixelSpace.
+
+## Database Overview
+
+| Table | Purpose |
+|---|---|
+| `users` | Stores user account information and bios |
+| `posts` | Stores post details, image paths, captions, and user IDs |
+| `likes` | Stores likes associated with users and posts |
+
+## How to Use
+
+1. Register a new account or log in.
+2. Open the Create Post page.
+3. Select an image and add a caption.
+4. Share the post.
+5. Browse photos on the homepage.
+6. Like or unlike posts.
+7. Search for users and photos.
+8. Open user profiles to view their posts.
+9. Delete your own posts when needed.
+
+## Security and Validation
+
+- Prepared SQL statements are used for database queries.
+- Uploaded images are validated by image type and size.
+- Random filenames help reduce filename conflicts.
+- Login checks restrict access to authenticated features.
+- Post ownership should be verified on the server before deletion.
+- Output escaping helps protect against HTML injection.
+
+## Future Enhancements
+
+- Edit existing posts and captions.
+- Add profile picture uploads.
+- Add comments on posts.
+- Add follow and unfollow functionality.
+- Add notifications for likes and other interactions.
+- Improve image discovery and filtering.
+
+## Learning Outcomes
+
+This project demonstrates practical implementation of frontend development, PHP server-side programming, MySQL database integration, user authentication, file uploads, session management, and CRUD operations.
+
+## Author
+
+**Developed as a college web development project.**
+
+**Project Name:** PixelSpace  
+**Project Type:** Photo Sharing Web Application
 
